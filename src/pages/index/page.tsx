@@ -11,7 +11,7 @@ const defaultHouseInfo = {
   unit: ['1单元', '2单元'],
   building: [1, 2, 3, 4, 5],
   nearStreet: [true, false],
-  property: ['公寓', '住宅'],
+  property: ['公寓', '住宅', '大平层'],
   toward: ['东', '南', '西', '北'],
   level: [
     2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -23,7 +23,7 @@ const s2Options = {
   width: 1420,
   height: 580,
   pagination: {
-    pageSize: 50,
+    pageSize: 60,
     current: 1
   },
   conditions: {

@@ -48,4 +48,5 @@ coverage/
 
 *.pid
 *.log
+.mfsu*
 /linters/sass-lint.html

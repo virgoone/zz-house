@@ -1,8 +1,16 @@
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
 module.exports = {
+  // build: {
+  //   // 默认为babel，esbuild 只有 dev 有效，
+  //   transpiler: 'esbuild'
+  // },
   variables: {
+    esbuild: {
+      enabled: true
+    },
     // 必选
     SENTRY_DSN: undefined,
+    // MFSU: true,
 
     // 必选，网页标题
     APP_TITLE: '如何在郑州找到心仪的房子？'
@@ -60,8 +68,14 @@ module.exports = {
   configureWebpack: (config) => {
     // config 即为最终生成的 webpack config，若函数有返回值则与原 config 进行 webpack-merge
     // 可直接修改原 config，但不要返回任何内容
-    return {
-      plugins: [new AntdDayjsWebpackPlugin()]
-    }
+    // config.module.rules.push({
+    //   test: /.m?js/,
+    //   exclude: /(node_modules|bower_components)/,
+    //   resolve: {
+    //     fullySpecified: false
+    //   }
+    // })
+    // .rule('mjs-rule').test(/.m?js/).resolve.set('fullySpecified', false)
+    // config.plugins.push(new AntdDayjsWebpackPlugin())
   }
 }
